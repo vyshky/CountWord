@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 
 namespace CountWord
@@ -14,10 +14,10 @@ namespace CountWord
 
         static int CountWord(string str)
         {
-            int count = 0;
-            int i = 0;
-            bool word;
-            do
+            int count = 0;           
+            bool word;            
+
+            for (int i = 0; i < str.Length - 1;)
             {
                 word = true;
                 while (!char.IsLetter(str, i) && i < str.Length - 1)
@@ -36,8 +36,7 @@ namespace CountWord
                         i++;
                     }
                 }
-
-            } while (i < str.Length - 1);
+            }
 
             return count;
         }
